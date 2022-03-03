@@ -1,0 +1,21 @@
+<div class="m-users">
+  <h2>Recent users</h2>
+  <p>These users are new to Friendship, go check out their profiles and give them a like!</p>
+  <div class="user-container">
+    <% for (let i = 0; i < 6; i++) { %>
+    <a href="/otherprofile/<%= data[i].username %>">
+      <div class="user">
+        <div class="user__image"
+          style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)), url(<%= data[i].avatar %>)">
+        </div>
+        <h4>
+          <%= data[i].firstname %>
+        </h4>
+        <p>
+          <%= data[i].location %>
+        </p>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</div>
